@@ -1,0 +1,21 @@
+﻿
+        .btn {
+            width: 33%;
+            border: 1px solid darkgrey;
+            font-size: 55px;
+            font-family: monospace;
+            color: black;
+            background: -webkit-linear-gradient(top,  lightgrey 31%, grey 100%);
+            text-align: center;
+            vertical-align: middle;
+            box-shadow: 1px 1px 2px 1px rgba(134, 134, 134, 0.95);
+            margin: 3px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+         
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }

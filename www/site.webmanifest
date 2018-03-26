@@ -1,0 +1,28 @@
+{
+    "name": "Howfar",
+    "short_name": "Howfar",
+    "start_url": ".",
+    "icons": [
+        {
+            "src": "https://www.welike2travel.de/howfar/images/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "purpose": "any",
+            "type": "image/jpg"
+        },
+        {
+            "src": "https://www.welike2travel.de/howfar/images/android-chrome-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "https://www.welike2travel.de/howfar/images/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "purpose": "any",
+            "type": "image/jpg"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "orientation": "portrait",
+    "display": "standalone"
+}

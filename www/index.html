@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html  lang="en" >
+  <head dir="ltr" lang="de" spellcheck="false"> 
+    <title>MaPhone</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <!--meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" / -->
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com -->
+    <!--meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap: ws: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline' data: blob:;media-src *;img-src * 'self' data: content:;script-src * 'unsafe-inline' 'unsafe-eval' data: blob:;" /-->
+
+    <link type="text/css" rel="stylesheet" media="screen" href="css/jqtouch.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="css/jqtheme.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="css/maphone.css">
+    <link rel="apple-touch-icon-precomposed" href="images/android-chrome-192x192.png" />  
+    <link rel="manifest" href="site.webmanifest">
+        
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/> 
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-startup-image" href="images/android-chrome-192x192.png" />
+        
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jqtouch.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </head> 
+   
+    <body id="jqt" style="100vh">
+    <div id="home">
+            <div class="toolbar">
+                <h1 id="ltr0">MaPhone</h1>
+                <a id="ltr1a" class="button flip" href="#settings">Einstellung</a>
+            </div>
+        <ul class="rounded">
+            <li><input style="background-color:black;font-size:30px;text-transform:capitalize;" type="text" placeholder="Nummer" id="divtelno" /></li>
+        </ul>
+        <div class="container">
+            <div class="btn"   id="btn1" class="btn">1</div>
+            <div class="btn"   id="btn2" class="btn">2</div>
+            <div class="btn"   id="btn3" class="btn">3</div>
+        </div>
+        <div class="container">
+            <div id="btn4" class="btn">4</div>
+            <div id="btn5" class="btn">5</div>
+            <div id="btn6" class="btn">6</div>
+        </div>
+        <div class="container">            
+            <div id="btn7" class="btn">7</div>
+            <div id="btn8" class="btn">8</div>
+            <div id="btn9" class="btn">9</div>
+        </div>
+        <div class="container">
+            <div class="btn" style="background: -webkit-linear-gradient(top, yellowgreen 31%, darkgreen 100%);text-decoration:none;" id="btnD"><img id="dialimg" style="position:relative;top:5px;" src="phone.png"/></div>
+            <div id="btn0" class="btn">0</div>
+            <div style="background: -webkit-linear-gradient(top, orange 31%, orangered 100%);" id="btnC" class="btn"><img style="position:relative;top:9px;" src="delete.png"/></div>
+        </div>
+        <div id="dialc1" style="display:none" class="container">
+            <div class="btn" style="width:100%;font-size:45px;background: -webkit-linear-gradient(top, orangered 31%, darkred 100%);text-decoration:none;"  id="dial1">c</div> 
+        </div>
+        <div id="dialc2" style="display:none"  class="container">
+            <div class="btn" style="width:100%;font-size:45px;background: -webkit-linear-gradient(top, orangered 31%, darkred 100%);text-decoration:none;" id="dial2">c</div> 
+        </div>
+        <div id="dialc3" style="display:none"  class="container">
+            <div class="btn" style="width:100%;font-size:45px;background: -webkit-linear-gradient(top, orangered 31%, darkred 100%);text-decoration:none;"  id="dial3">c</div> 
+        </div>
+        
+    </div>
+    
+    <div id="settings">
+            <div class="toolbar">
+                <a class="button" href="#info">Info</a>
+                <h1 id="ltr1b">Einstellungen</h1>
+                <a id="ltr13c" class="button cancel" href="#">Zurück</a>
+            </div>
+            <form id="form" method="post" action="#">
+                <ul class="rounded">
+                    <li style="color:white">
+                        <input id="name1" type="text" autocomplete="off" placeholder="Name 1" style="font-size:45px;text-transform:capitalize;" size="20" />
+                        <input id="telno1" type="text" autocomplete="off" placeholder="Telefonnummer 1" style="font-size:45px" size="20" />
+                    </li>
+                    <li style="color:white">
+                        <input id="name2" type="text" autocomplete="off" placeholder="Name 2" style="font-size:45px;text-transform:capitalize;" size="20" />
+                        <input id="telno2" type="text" autocomplete="off" placeholder="Telefonnummer 2" style="font-size:45px" size="20" />
+                    </li>
+                    <li style="color:white">
+                        <input id="name3" type="text" autocomplete="off" placeholder="Name 3" style="font-size:45px;text-transform:capitalize;" size="20" />
+                        <input id="telno3" type="text" autocomplete="off" placeholder="Telefonnummer 3" style="font-size:45px" size="20" />
+                    </li>
+                    
+                    <li><input id="ltr9c" type="submit" class="submit" name="action" value="Speichern" /></li>
+            </form>
+    </div>
+    <div id="info">
+            <div class="toolbar">
+                <h1 id="ltr0">Device Info</h1>
+                <a class="button cancel" href="#">Zurück</a>
+            </div>
+            <ul class="edgetoedge" style="margin:5px">
+                <li style="color:white"><b>Platform: </b><p style="display:inline;text-transform:capitalize;" id="devplatform"></p></li>
+                <li style="color:white"><b>Hersteller: </b><p style="display:inline;text-transform:capitalize;" id="devmanufacturer"></p></li>
+                <li style="color:white"><b>Version: </b><p style="display:inline;text-transform:capitalize;" id="devversion"></p></li>
+                <li style="color:white"><b>Modell: </b><p style="display:inline;text-transform:capitalize;" id="devmodel"></p></li>
+            </ul>
+    </div>        
+    </body>
+    </html>
+
+					  
